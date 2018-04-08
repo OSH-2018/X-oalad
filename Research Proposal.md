@@ -163,6 +163,8 @@ TODO：邓龙、徐煜森(3000~5000)
 ## 参考文献
 
 [1] Pulli K, Baksheev A, Kornyakov K, et al. Realtime computer vision with OpenCV[J]. Queue, 2012, 10(4): 40.
+
 [2] Cheng Shiwei,Sun Lingyun.A Survey on Visualization for Eye Tracking Data[J].Journal of Computer-Aided Design and Computer Graphics,2014,26(5):698-707.
+
 [3]P. Xu, K. A. Ehinger, Y. Zhang, A. Finkelstein, S. R. Kulkarni, and J. Xiao. Turkergaze: crowdsourcing saliency with webcam based eye tracking[J].arXiv preprint arXiv:1504.06755, 2015.
 
