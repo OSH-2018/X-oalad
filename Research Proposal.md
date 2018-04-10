@@ -202,3 +202,6 @@ TODO：邓龙、徐煜森(3000~5000)
 
 [3]P. Xu, K. A. Ehinger, Y. Zhang, A. Finkelstein, S. R. Kulkarni, and J. Xiao. Turkergaze: crowdsourcing saliency with webcam based eye tracking[J].arXiv preprint arXiv:1504.06755, 2015.
 
+[4]Dan Witzner Hansen, Qiang Ji, Senior. In the Eye of the Beholder: A Survey of Models for Eyes and Gaze[J].IEEE TRANSACTIONS ON PATTERN ANALYSIS AND MACHINE INTELLIGENCE, VOL.32, NO.3, MARCH 2010.
+
+[5]
