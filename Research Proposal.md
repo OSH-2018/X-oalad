@@ -263,6 +263,7 @@ Tobii Pro不仅提供眼动仪相关产品，同时还提供解决方案服务�
 
 #### 2.2.The Eye Tribe
 
+
 The Eye Tribe的目标是以合理的价格为所有人提供眼动追踪。几年之内，他们在低成本眼动追踪领域被誉为世界领先的研究小组。2013年4月，他们展示了全球首款Android眼动追踪平板电脑。
 Eye Tribe软件支持在移动设备上进行眼控，允许免提导航网站和应用程序，包括眼睛激活的登录，增强的游戏体验和基于云的用户参与分析。Eye Tribe计划通过将技术授权给制造商，成为大众市场消费类设备眼控技术的领先供应商。
 配备眼动仪设备使用户能够将他们的眼球注视作为输入形式，可以与其他输入设备（如鼠标，键盘，触摸和手势）（称为活动应用程序）结合使用。此外，通过眼动仪收集的眼睛注视数据可用于改进网站或杂志封面的设计。可从眼动追踪中受益的应用包括游戏，操作系统导航，电子书，市场调查研究和可用性测试。
@@ -329,3 +330,12 @@ FOVE 0 售价：599 USD（折合人民币3774.9元）
 
 [13]Rayner K. Eye movements in reading and information processing: 20 years of research[J]. Psychological bulletin, 1998, 124(3): 372.
 
+[14]Krizhevsky A, Sutskever I, Hinton G E. Imagenet classification with deep convolutional neural networks[C]//Advances in neural information processing systems. 2012: 1097-1105.
+
+[15]Stanford.CS231n Convolutional Neural Networks for Visual Recognition.  cs231n.github.io/classification/
+
+[16]Boiman O, Shechtman E, Irani M. In defense of nearest-neighbor based image classification[C]//Computer Vision and Pattern Recognition, 2008. CVPR 2008. IEEE Conference on. IEEE, 2008: 1-8.
+
+[17]Zhang H, Berg A C, Maire M, et al. SVM-KNN: Discriminative nearest neighbor classification for visual category recognition[C]//Computer Vision and Pattern Recognition, 2006 IEEE Computer Society Conference on. IEEE, 2006, 2: 2126-2136.
+
+[18]Pan S J, Yang Q. A survey on transfer learning[J]. IEEE Transactions on knowledge and data engineering, 2010, 22(10): 1345-1359.
