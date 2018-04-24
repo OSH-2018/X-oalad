@@ -187,6 +187,48 @@ POOL层将沿着空间维度（宽度，高度）执行下采样操作，从而�
 FC（即完全连接）层将计算每个类别的分数，从而得到大小为[1×1×10]的数量，其中每个数字对应于每个类别的分数，例如10个类别的CIFAR-10。和普通的神经网络一样，顾名思义，这个层中的每个神经元都将连接到前一volume中的所有数字。
 通过这种方式，ConvNets将原始图像逐层从原始像素值转换为最终的类别分数。请注意，某些图层包含参数，其他图层则不包含。具体而言，CONV / FC层执行转换，这些转换不仅是输入图像中的激活，而且也是参数（神经元的权重和偏差）的函数。另一方面，RELU / POOL层将实现一个固定的功能。 CONV / FC图层中的参数将使用梯度下降进行训练，以便ConvNet计算的类别分数与每个图像的训练集中的标签一致。
 
+### 2. Opencv
+#### 2.1 简介
+OpenCV的全称是Open Source Computer Vision Library，是一个跨平台的计算机视觉库。OpenCV是由英特尔公司发起并参与开发，以BSD许可证授权发行，可以在商业和研究领域中免费使用。OpenCV可用于开发实时的图像处理、计算机视觉以及模式识别程序。该程序库也可以使用英特尔公司的IPP进行加速处理。
+#### 2.2 配置环境
+以vs2017和opencv3.2.0为例
+    a)安装：将opencv安装C盘中
+    b)配置环境变量：计算机->属性->高级系统设置->环境变量 添加C:\ opencv\build\x64\vc14\bin
+![](pictures/env1.png)
+    c)新建项目c++控制台项目，将debug||X86设置成X64。
+    d)右键项目属性，VC++目录->包含目录，添加 
+    C:\opencv\build\include 
+    C:\opencv\build\include\opencv 
+    C:\opencv\build\include\opencv2 
+    VC++目录->库目录，添加 
+    C:\opencv\build\x64\vc14\lib 
+    链接器->输入，添加 
+    opencv_world320d.lib（release下添加opencv_world320.lib）
+ ![](pictures/env2.png)
+
+附测试用代码：
+include <opencv2/opencv.hpp>
+#include <iostream>
+using namespace std;
+using namespace cv;
+int main()
+{
+    Mat image = imread("D:\\test.jpg");  //存放自己图像的路径 
+    imshow("显示图像", image);
+    waitKey(0);
+    return 0;
+}
+
+#### 2.3 定位瞳孔的简单实现
+    a)定位瞳孔可以直接使用opencv中的自带的分类器（haarcascade_eye_tree_eyeglasses.xml）来实现，做了实验后发现在正面人脸的情况下定位还是很准确的。注意haarcascade_eye_tree_eyeglasses.xml文件在opencv安装目录下的data文件夹中。
+    b)用opencv中检测人脸、眼睛、嘴巴等都是用的CascadeClassifier分类器，具体使用时可以使用C的函数，也可以使用opencv中使用C++封装好的类。下面是它们检测目标时的函数形式:
+C: CvSeq* cvHaarDetectObjects(const CvArr* image, CvHaarClassifierCascade* cascade,CvMemStorage* storage,double scale_factor=1.1, int min_neighbors=3, int flags=0, CvSize min_size=cvSize(0,0), CvSize max_size=cvSize(0,0) )
+
+C++: void CascadeClassifier::detectMultiScale(const Mat& image, vector<Rect>& objects, double scaleFactor=1.1, int minNeighbors=3, int flags=0, Size minSize=Size(), Size maxSize=Size()
+
+    这两者最大的区别在于，用C封装的函数要自己手动分配内存，而用C++的形式则不用自己去分配内存。显然C++形式的更加简洁。
+
+
 能力评估
 
 相比传统神经网络，卷积神经网络减少网络各层之间的连接，同时又降低了过拟合的风险，简化了模型复杂度，减少了模型的参数。其并行处理图像特征的方式也更符合动物行为。同时，其对特征的提取全面深入，因此在应用中取得了较好的成果。然而，其对象主要是大型图像处理，依然需要大量数据防止过拟合，所需训练时间也较长。针对此问题，我们或许可以通过采用视频截图的方式来训练。
