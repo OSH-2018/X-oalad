@@ -14,5 +14,6 @@
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/ml/ml.hpp>
 #include <iostream>
+#include <fstream>
 
 // TODO: 在此处引用程序需要的其他头文件
