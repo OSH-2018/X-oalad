@@ -7,13 +7,21 @@
 
 #include "targetver.h"
 
-#include <stdio.h>
+#include <cstdio>
+#include <iostream>
+#include <fstream>
+#include <queue>
 #include <tchar.h>
 
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/ml/ml.hpp>
-#include <iostream>
-#include <fstream>
+#include <opencv2/objdetect/objdetect.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
+
+
+#include "constants.h"
+#include "helpers.h"
+#include "findEyeCorner.h"
 
 // TODO: 在此处引用程序需要的其他头文件
