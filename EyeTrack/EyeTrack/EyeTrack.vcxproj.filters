@@ -21,6 +21,18 @@
     <ClInclude Include="targetver.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="constants.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="findEyeCenter.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="findEyeCorner.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="helpers.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -30,6 +42,15 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="svmTraining.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="findEyeCenter.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="findEyeCorner.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="helpers.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

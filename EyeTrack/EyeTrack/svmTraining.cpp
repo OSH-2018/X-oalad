@@ -15,7 +15,7 @@ const int npix = 18;//npix: Number of PIXels per picture;
 文件model_svm.xml,存储了训练好的模型
 */
 
-int svmTraining()
+void svmTraining()
 {
 	//读取label文件
 	ifstream data_labels;
