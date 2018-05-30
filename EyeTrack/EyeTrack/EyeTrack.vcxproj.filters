@@ -29,5 +29,8 @@
     <ClCompile Include="EyeTrack.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="svmTraining.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
