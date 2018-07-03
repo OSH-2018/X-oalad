@@ -71,3 +71,5 @@ void svmTraining()
 	model->trainAuto(tData, 10);
 	model->save("svm_model.xml");
 }
+
+

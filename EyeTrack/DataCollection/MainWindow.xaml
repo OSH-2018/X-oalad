@@ -3,10 +3,22 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DataCollection"
+        xmlns:wfi ="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration"
+        xmlns:aforge ="clr-namespace:AForge.Controls;assembly=AForge.Controls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="MainWindow" Height="450" Width="800" WindowState="Maximized" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" WindowStyle="None" KeyDown="Window_KeyDown" MouseDown="Window_MouseDown" Closed="Window_Closed">
+    <Grid x:Name="grid" Focusable="True">
+        <Ellipse x:Name="ellActivePoint" Height="80" Margin="386,259,0,0" Stroke="Black" Width="80" StrokeThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <Ellipse.Fill>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuHighlightColorKey}}"/>
+            </Ellipse.Fill>
+        </Ellipse>
+        <Label x:Name="labCentre" Content="+" HorizontalAlignment="Left" Margin="386,259,0,0" VerticalAlignment="Top" Width="80" Height="80" FontSize="48" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Stretch"/>
+        <StackPanel Name="stp" HorizontalAlignment="Right" Height="Auto" Margin="0,0,0,0" VerticalAlignment="Bottom" Width="Auto">
+            <ComboBox Grid.Row="0" Name="comboBoxVideoDevices" FontSize="16" Margin="8,4" IsReadOnly="True"/>
+            <WindowsFormsHost Margin="0,0,0,0" Height="240" Width="320" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                <aforge:VideoSourcePlayer x:Name="vsp" />
+            </WindowsFormsHost>
+        </StackPanel>
     </Grid>
 </Window>

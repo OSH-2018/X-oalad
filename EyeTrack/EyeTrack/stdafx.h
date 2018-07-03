@@ -12,6 +12,8 @@
 #include <fstream>
 #include <queue>
 #include <tchar.h>
+#include <Windows.h>
+#include <sstream>
 
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
@@ -23,5 +25,8 @@
 #include "constants.h"
 #include "helpers.h"
 #include "findEyeCorner.h"
+#include "findEyeCenter.h"
+#include "resize.h"
+#include "knn.h"
 
 // TODO: 在此处引用程序需要的其他头文件
