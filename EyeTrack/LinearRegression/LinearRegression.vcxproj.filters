@@ -24,25 +24,10 @@
     <ClInclude Include="constants.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="findEyeCenter.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="findEyeCorner.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="helpers.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="knn.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="resize.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="svmTraining.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="GUI.h">
+    <ClInclude Include="findEyeCenter.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -50,28 +35,10 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="EyeTrack.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="svmTraining.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="findEyeCenter.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="findEyeCorner.cpp">
+    <ClCompile Include="source.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="helpers.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="resize.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="knn.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="GUI.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

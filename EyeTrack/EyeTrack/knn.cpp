@@ -5,6 +5,8 @@ using namespace std;
 
 
 void KNNtraining(string path) {
+	cout << "UNIMPLENMENT" << endl;
+	return;
 	ifstream fin(path + "sampleSize.txt");
 	int sampleSize = 2;
 	fin >> sampleSize;
@@ -16,4 +18,9 @@ void KNNtraining(string path) {
 	Ptr<ml::KNearest> knn = ml::KNearest::create();
 	knn->setAlgorithmType(ml::KNearest::KDTREE);
 	knn->train(train_data, cv::ml::ROW_SAMPLE, train_labels);
+}
+
+void KNNpredict(Mat img) {
+	cout << "UNIMPLENMENT" << endl;
+	return;
 }

@@ -2,7 +2,7 @@ i=0;
 while(1)
     if(i>300) break;
     end
-    p=imread('lefteye.bmp');
+    p=imread('./../temp/lefteye.bmp');
     p=rgb2gray(p);
     p=histeq(p);
     p=imresize(p,[3,5]);
@@ -15,7 +15,7 @@ while(1)
     elseif(y==8||y==9||y==12||y==13) y=2;
     else y=3;
     end
-    f=fopen('result.txt','w');
+    f=fopen('./../temp/result.txt','w');
     fprintf(f,'%d',y);
     fclose(f);
     i=i+1;

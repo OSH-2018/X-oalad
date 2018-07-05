@@ -31,12 +31,12 @@ namespace DataCollection
         {
             InitializeComponent();
 
-            Directory.CreateDirectory(@".\dataset");
-            Directory.CreateDirectory(@".\dataset\picture");
-            Directory.CreateDirectory(@".\dataset\position");
+            Directory.CreateDirectory(@".\..\dataset");
+            Directory.CreateDirectory(@".\..\dataset\picture");
+            Directory.CreateDirectory(@".\..\dataset\position");
 
             info = new XmlDocument();
-            info.Load(@".\dataset\datasetInfo.xml");
+            info.Load(@".\..\dataset\datasetInfo.xml");
             XmlElement sizeNode = (XmlElement)info.DocumentElement.SelectSingleNode("sampleSize");
             if (sizeNode == null)
                 sampleSize = 0;
@@ -108,13 +108,13 @@ namespace DataCollection
                    Int32Rect.Empty,
                    BitmapSizeOptions.FromEmptyOptions());
             BmpBitmapEncoder encoder = new BmpBitmapEncoder();
-            using (var stream = new FileStream(@".\dataset\picture\" + sampleSize.ToString() + ".bmp", FileMode.Create))
+            using (var stream = new FileStream(@".\..\dataset\picture\" + sampleSize.ToString() + ".bmp", FileMode.Create))
             {
                 encoder.Frames.Add(BitmapFrame.Create(bs));
                 encoder.Save(stream);
             }
 
-            using (var stream = new StreamWriter(@".\dataset\position\" + sampleSize.ToString() + ".txt", false))
+            using (var stream = new StreamWriter(@".\..\dataset\position\" + sampleSize.ToString() + ".txt", false))
             {
                 stream.Write(x.ToString() + " " + y.ToString());
             }
@@ -157,9 +157,9 @@ namespace DataCollection
             }
             else
                 sizeNode.InnerText = sampleSize.ToString();
-            info.Save(@".\dataset\datasetInfo.xml");
+            info.Save(@".\..\dataset\datasetInfo.xml");
 
-            using (var stream = new StreamWriter(@".\dataset\sampleSize.txt" , false))
+            using (var stream = new StreamWriter(@".\..\dataset\sampleSize.txt" , false))
             {
                 stream.Write(sampleSize);
             }
